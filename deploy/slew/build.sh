@@ -9,4 +9,5 @@ cp -R dist/. "$output/server/dist/"
 cp package.json package-lock.json "$output/server/"
 cp deploy/slew/run.mjs "$output/server/"
 cp deploy/slew/slew.json "$output/"
+# Slew's musl runtime cannot load Cursor's optional glibc binaries.
 npm ci --prefix "$output/server" --omit=dev --omit=optional --ignore-scripts --no-audit --no-fund
