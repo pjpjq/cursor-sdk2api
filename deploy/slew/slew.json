@@ -1,0 +1,1 @@
+{ "server": "server/run.mjs", "runtime": "node22" }
